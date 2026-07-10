@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pranesh P — DevOps Engineer</title>
+  <meta name="description"
+    content="Professional profile of Sam Donald, a DevOps engineer with 3 years experience deploying applications safely using Docker, Kubernetes, CI/CD, Jenkins, GitHub, and AWS." />
+  <meta name="author" content="Sam Donald" />
+  <meta property="og:title" content="Sam Donald — DevOps Engineer" />
+  <meta property="og:description"
+    content="DevOps engineer specializing in cloud infrastructure, Kubernetes, Docker, CI/CD, Jenkins, GitHub, and AWS." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+
+
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --surface: #161618;
+      --accent: #d1ff4d;
+      --muted: #a1a1aa;
+      --border: #27272a;
+      --fg: #fafafa;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 2rem;
+      }
+    }
+
+    /* Nav */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        padding: 1.5rem 2rem;
+      }
+    }
+
+    .brand {
+      font-family: var(--mono);
+      font-size: 0.875rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        gap: 2rem;
+      }
+    }
+
+    .nav-links a {
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      padding: 4rem 0;
+    }
+
+    @media (min-width: 768px) {
+      main {
+        padding: 5rem 0;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: end;
+      margin-bottom: 6rem;
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 10vw, 9rem);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 .dim {
+      color: rgba(161, 161, 170, 0.3);
+    }
+
+    .hero p {
+      max-width: 36rem;
+      font-size: 1.125rem;
+      color: var(--muted);
+    }
+
+    @media (min-width: 768px) {
+      .hero p {
+        font-size: 1.25rem;
+      }
+    }
+
+    .hero p .hl {
+      color: var(--fg);
+    }
+
+    .side {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .badge {
+      font-family: var(--mono);
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      border: 1px solid rgba(209, 255, 77, 0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .portrait {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: 0.625rem;
+      color: #52525b;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    /* Section headers */
+    section {
+      margin-bottom: 6rem;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-head h2 {
+      font-family: var(--mono);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+
+    .section-head span {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
+    /* Skills grid */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    @media (min-width: 768px) {
+      .skills {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .skills {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    .skill {
+      background: var(--bg);
+      padding: 1.5rem;
+      transition: background 0.2s;
+    }
+
+    @media (min-width: 768px) {
+      .skill {
+        padding: 2rem;
+      }
+    }
+
+    .skill:hover {
+      background: var(--surface);
+    }
+
+    .skill .label {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .skill .name {
+      font-weight: 600;
+    }
+
+    /* Experience */
+    .job {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .job {
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+      }
+    }
+
+    .job .when {
+      font-family: var(--mono);
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    .job .body {
+      border-left: 1px solid var(--border);
+      padding-left: 2rem;
+    }
+
+    .job.current .body {
+      border-left-color: rgba(209, 255, 77, 0.3);
+    }
+
+    .job h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .job .co {
+      color: var(--muted);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .job.current .co {
+      color: var(--accent);
+    }
+
+    .job .desc {
+      color: var(--muted);
+      max-width: 36rem;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .projects {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .project {
+      cursor: pointer;
+    }
+
+    .project .thumb {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: 0.625rem;
+      color: #52525b;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    .project h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+    }
+
+    .project:hover h3 {
+      color: var(--accent);
+    }
+
+    .project p {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.875rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      footer {
+        padding: 3rem;
+      }
+    }
+
+    .foot-top {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .foot-top {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .foot-top .label {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 0.5rem;
+    }
+
+    .foot-top .email {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    @media (min-width: 768px) {
+      .foot-top .email {
+        font-size: 1.875rem;
+      }
+    }
+
+    .socials {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .socials a {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .socials a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+
+    .foot-bot {
+      max-width: 1280px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(39, 39, 42, 0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 0.625rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    @media (min-width: 768px) {
+      .foot-bot {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="brand"><span>$</span> pranesh.P / devops</div>
+    <div class="nav-links">
+      <a href="#stack">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1>PRANESH<br /><span class="dim">P</span></h1>
+        <p>
+          Specialized in <span class="hl">cloud infrastructure</span> and high-velocity deployment
+          pipelines. Bridging the gap between code and production with 3 years of battle-tested
+          automation.
+        </p>
+      </div>
+      <div class="side">
+        <div class="badge">Currently: Available for Hire</div>
+        <div class="portrait">Profile Image</div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack">
+      <div class="section-head">
+        <h2>Core Competencies</h2>
+        <span>[01]</span>
+      </div>
+      <div class="skills">
+        <div class="skill">
+          <p class="label">01. Orchestration</p>
+          <p class="name">Kubernetes</p>
+        </div>
+        <div class="skill">
+          <p class="label">02. Containerization</p>
+          <p class="name">Docker</p>
+        </div>
+        <div class="skill">
+          <p class="label">03. Cloud Platform</p>
+          <p class="name">AWS</p>
+        </div>
+        <div class="skill">
+          <p class="label">04. Automation</p>
+          <p class="name">Jenkins</p>
+        </div>
+        <div class="skill">
+          <p class="label">05. Version Control</p>
+          <p class="name">GitHub</p>
+        </div>
+        <div class="skill">
+          <p class="label">06. Pipelines</p>
+          <p class="name">CI/CD</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <span>[02]</span>
+      </div>
+      <div class="job current">
+        <div class="when">2022 — Present</div>
+        <div class="body">
+          <h3>DevOps Engineer</h3>
+          <div class="co">Tech Solutions Inc.</div>
+          <p class="desc">
+            Deploying applications safely using modern DevOps tools. Managing containerized
+            microservices on Kubernetes, building CI/CD pipelines with Jenkins and GitHub
+            Actions, and provisioning AWS infrastructure with Terraform and CloudFormation.
+          </p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2021 — 2022</div>
+        <div class="body">
+          <h3>Systems Associate</h3>
+          <div class="co">CloudFirst Labs</div>
+          <p class="desc">
+            Supported Docker containerization efforts and maintained Jenkins build servers.
+            Assisted with AWS EC2 and ECS deployments while implementing monitoring and
+            alerting for production services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <div class="section-head">
+        <h2>Recent Deployments</h2>
+        <span>[03]</span>
+      </div>
+      <div class="projects">
+        <article class="project">
+          <div class="thumb">Project Visual</div>
+          <h3>Fintech Scale-up Architecture</h3>
+          <p>Automated EKS deployment scaling from 10 to 200 nodes during peak traffic windows.</p>
+        </article>
+        <article class="project">
+          <div class="thumb">Project Visual</div>
+          <h3>Global CI/CD Standardization</h3>
+          <p>Unified disparate build systems into a single Jenkins-based GitOps workflow.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="foot-top">
+      <div>
+        <p class="label">Let's scale together</p>
+        <p class="email">hello@pranesh.dev</p>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="GitHub">GH</a>
+        <a href="#" aria-label="LinkedIn">LI</a>
+        <a href="#" aria-label="Twitter">TW</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2024 PRANESH P</span>
+      <span>Deploying safely since 2021</span>
+    </div>
+  </footer>
+</body>
+
+</html>
